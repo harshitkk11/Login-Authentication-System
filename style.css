@@ -1,0 +1,26 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    background: cadetblue;
+}
+
+.navbar{
+    padding: auto;
+    width: 100%;
+    height: auto;
+    background-color: aquamarine;
+    overflow: hidden;
+    
+}
+
+/* .nav-items{
+    list-style: none;
+} */
+.nav-item{
+    text-decoration: none;
+    display:inline;
+    float: left;
+    margin: 10px;
+}
