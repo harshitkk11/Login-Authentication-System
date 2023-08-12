@@ -58,11 +58,13 @@ body{
 }
 
 .nav-item>button{
-    color:white;
-    background: black;
-    border: 1px solid black;
+    /* color:white;
+    background: black; */
+    border: 0;
     border-radius: 5px;
-    padding: 10px;
+    box-shadow: 2px 2px 10px;
+    padding: 8px;
+    font-size: 15px;
 }
 
 main{
