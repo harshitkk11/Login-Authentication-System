@@ -9,37 +9,36 @@
 <body>
     <nav class="navbar">
         <div class="pagename">
-            <a href="/index.html">Login Page</a>
+            <a href="/login.html">Login Page</a>
         </div>
         <div class="items">
             <ul class="nav-items">
                 <li class="nav-item"><a href="/about.html">About</a></li>
-                <li class="nav-item"><button>Signup</button></li>
+                <li class="nav-item"><button><a href="/login.html">Login</a></button></li>
             </ul>
         </div>
     </nav>
+
     <main>
-        <h1>Sign Up</h1>
-        <form class="signup-form" action="">
-            <label for="name">Name</label>
-            <input type="text" id="name">
+        <h1 class="signup-heading">Sign Up</h1>
+        <form class="login-form" action="">
+            <p class="alert"></p>
             <label for="username">Username</label>
             <input id="username" class="username" type="text" placeholder="Enter Username"/>
             <br>
             <br>
             <label for="password">Password</label>
-            <input id="password" type="password" placeholder="Enter Password">
+            <input id="password" class="password" type="password" placeholder="Enter Password">
             <br>
+            <a href="#" class="forgotpass">Forgot password?</a>
             <br>
             <input type="submit" value="Login" class="submit">
-            <div class="links">
-                <a href="#" class="forgotpass">Forgot Password</a>
-                <p>|</p>
-                <a href="#" class="signup">signup</a>
+            <div class="signup-link">
+                <p>Don't have an account?</p>
+                <a href="/signup.html" class="signup">signup</a>
             </div>
-            <script></script>
         </form>
-        
     </main>
 </body>
+<script src="./main.js"></script>
 </html>
