@@ -1,12 +1,20 @@
-const username = document.querySelector(".username");
-const password = document.querySelector("#password");
-const submit = document.querySelector(".submit");
+const username = document.querySelector('.username');
+const password = document.querySelector('.password');
 
+function validation(){
+    if (username.value == "" ){
+        document.querySelector('.alert').textContent = "Enter Username";
+    }
 
-function findUser(){
+    else if (password.value == "" ){
+        document.querySelector('.alert').textContent = "Enter Password";
+    }
     
+    else if(username.value != "" || password.value != ""){
+        document.querySelector('.alert').textContent = "";
+    }
+
 }
 
-
-// on clicking on the login button submit the username and password
-submit.addEventListener('click', findUser);
+const submit = document.querySelector('.submit');
+submit.addEventListener("click", validation);

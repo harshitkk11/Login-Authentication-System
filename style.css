@@ -9,16 +9,19 @@ body{
     font-family: "Roboto", sans-serif;
 }
 
+/* Navigation Bar */
 .navbar{
     display: flex;
     width: 100%;
     background-color: aquamarine;
-    height: 50px;
+    height: 55px;
     justify-content: space-between;
 }
 
+/* NavBar is divided into to parts div1(pagename) & div2(items) */
+
+/* Div1(pagename) */
 .pagename{
-    /* background: yellowgreen; */
     width: 50%;
     display: flex;
     justify-content: flex-start;
@@ -26,19 +29,22 @@ body{
     padding-left: 15px;
 }
 
+/* Logo text */
 .pagename>a{
     text-decoration: none;
     color:black;
     font-size: 20px;
+    font-weight: bold;
 }
 
+/* Div2(items) */
 .items{
     width: 50%;
-    /* background: yellow; */
     display: flex;
     justify-content:flex-end;
     align-items: center;
 }
+
 
 .items.nav-items{
     list-style: none;
@@ -58,12 +64,10 @@ body{
 }
 
 .nav-item>button{
-    /* color:white;
-    background: black; */
     border: 0;
-    border-radius: 5px;
+    border-radius: 13px;
     box-shadow: 2px 2px 10px;
-    padding: 8px;
+    padding: 10px;
     font-size: 15px;
 }
 
@@ -74,11 +78,11 @@ main{
     flex-direction: column;
 }
 
-main>h1{
+.login-heading{
     margin: 30px 0;
 }
 
-form{
+.login-form, .signup-form{
     border: 1px solid black;
     border-radius: 5px;
     box-shadow: 2px 2px 20px 2px black;
@@ -89,6 +93,12 @@ form{
     width: auto;
     padding: 40px;
     
+}
+
+.alert{
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: darkred;
 }
 
 label{
@@ -116,22 +126,32 @@ label{
     box-shadow: 0 0 10px;
 }
 
-.links{
-    margin-top: 30px;
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
+.submit:active{
+    background:cadetblue;
 }
 
-.links>a{
-    text-decoration: none;
-    color: black;
+.forgotpass{
+    /* text-decoration: none; */
+    color: rgb(36, 8, 43);
+    align-self:self-start;
+    font-size: 15px;
+}
+
+.signup-link{
+    display: flex;
+    justify-content: baseline;
+    align-items: baseline;
+}
+
+.signup{
+    margin-left: 5px;
+    color: rgb(36, 8, 43);
+    font-size: 15px;
 }
 
 p{
-    margin: 0 25px;
+    font-size: 15px;
+    margin-top: 20px;
 }
 
 
