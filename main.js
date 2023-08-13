@@ -16,5 +16,5 @@ function validation(){
 
 }
 
-const submit = document.querySelector('.submit');
-submit.addEventListener("click", validation);
+// const submit = document.querySelector('.submit');
+// submit.addEventListener("click", validation);

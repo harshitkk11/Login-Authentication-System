@@ -5,7 +5,8 @@
 }
 
 body{
-    background: cadetblue;
+    background: #262626;
+    color: white;
     font-family: "Roboto", sans-serif;
 }
 
@@ -13,8 +14,8 @@ body{
 .navbar{
     display: flex;
     width: 100%;
-    background-color: aquamarine;
-    height: 55px;
+    background-color: #0d0d0d;
+    height: 60px;
     justify-content: space-between;
 }
 
@@ -32,13 +33,13 @@ body{
 /* Logo text */
 .pagename>a{
     text-decoration: none;
-    color:black;
+    color:white;
     font-size: 20px;
     font-weight: bold;
 }
 
 /* Div2(items) */
-.items{
+.items-div{
     width: 50%;
     display: flex;
     justify-content:flex-end;
@@ -46,28 +47,33 @@ body{
 }
 
 
-.items.nav-items{
+.items-div.nav-items{
     list-style: none;
     text-align: center;
 }
 
 .nav-item{
     display:inline;
-    font-size: 17px;
+    font-size: 15px;
     margin-right: 15px;
     
 }
 
 .nav-item>a{
     text-decoration: none;
-    color: black;
+    color: white;
 }
 
 .nav-item>button{
     border: 0;
     border-radius: 13px;
-    box-shadow: 2px 2px 10px;
+    box-shadow: 0 0 8px white;
     padding: 10px;
+
+}
+
+.nav-item>button:active{
+    background:#cccccc
 }
 
 .nav-item>button>a{
@@ -86,11 +92,12 @@ main{
 
 .login-heading{
     margin: 30px 0;
+    font-weight: bold;
 }
 
-.login-form, .signup-form{
+.login-form{
     border-radius: 5px;
-    box-shadow: 2px 2px 20px 2px black;
+    box-shadow: 2px 2px 20px 2px white;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -103,13 +110,14 @@ main{
 .alert{
     margin-top: 0;
     margin-bottom: 20px;
-    color: darkred;
+    color: #cc0000;
 }
 
 label{
-    font-size: 20px;
+    font-size: 17px;
     margin-bottom: 10px;
     align-self: self-start;
+    font-weight: bold;
 }
 
 #username, #password{
@@ -119,29 +127,36 @@ label{
     padding: 10px;
     border: 0;
     box-shadow: 0 0 10px;
+    background: #e6e6e6;
 }
 
-.submit{
-    width: 150px;
-    font-size: 17px;
-    padding: 5px;
-    align-items: end;
-    border: 0;
-    border-radius: 5px;
-    box-shadow: 0 0 10px;
-}
-
-.submit:active{
-    background:cadetblue;
+#username:focus, #password:focus{
+    background: white;
+    box-shadow: 0 0 10px white;
 }
 
 .forgotpass{
-    color: rgb(36, 8, 43);
+    color: #bfbfbf;
     align-self:self-start;
     font-size: 15px;
 }
 
+.submit{
+    width: 250px;
+    font-size: 17px;
+    padding: 8px;
+    align-items: end;
+    border: 0;
+    border-radius: 13px;
+    box-shadow: 0 0 10px white;
+}
+
+.submit:active{
+    background:#cccccc;
+}
+
 .signup-link{
+    margin-top: 30px;
     display: flex;
     justify-content: baseline;
     align-items: baseline;
@@ -149,7 +164,7 @@ label{
 
 .signup{
     margin-left: 5px;
-    color: rgb(36, 8, 43);
+    color: #bfbfbf;
     font-size: 15px;
 }
 
