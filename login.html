@@ -21,7 +21,7 @@
     </nav>
     <main>
         <h1 class="login-heading">Log in</h1>
-        <form class="login-form" action="">
+        <form class="login-form" action="" onsubmit="return validation()">
             <p class="alert"></p>
             <label for="username">Username</label>
             <input id="username" class="username" type="text" placeholder="Enter Username"/>
@@ -32,7 +32,7 @@
             <br>
             <a href="#" class="forgotpass">Forgot password?</a>
             <br>
-            <input type="submit" value="Login" class="submit" onclick="validation()">
+            <input type="submit" value="Login" class="submit">
             <div class="signup-link">
                 <p>Don't have an account?</p>
                 <a href="./signup.html" class="signup">signup</a>
