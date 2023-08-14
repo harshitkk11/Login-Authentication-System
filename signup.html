@@ -20,11 +20,12 @@
     </nav>
     <main>
         <h1 class="signup-heading">Sign Up</h1>
-        <form class="signup-form" action="">
+        <form class="signup-form" action="" onsubmit="return signupValidation()">
             <div class="name-username">
                 <div>
                     <label for="name">Name</label>
                     <input id="name" class="name" type="text" placeholder="Enter Full Name">
+                    <p class="name-error"></p>
                 </div>
                 <div>
                     <label for="username">Username</label>
