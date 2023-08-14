@@ -4,41 +4,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href=".\style.css">   
 </head>
 <body>
     <nav class="navbar">
         <div class="pagename">
-            <a href="/login.html">Login Page</a>
+            <a href="./login.html"><span>L</span>ogin<span>A</span>uth</a>
         </div>
-        <div class="items">
+        <div class="items-div">
             <ul class="nav-items">
-                <li class="nav-item"><a href="/about.html">About</a></li>
-                <li class="nav-item"><button><a href="/login.html">Login</a></button></li>
-            </ul>
+                <li class="nav-item"><a href="./about.html" class="about-btn">About</a></li>
+                <li class="nav-item">|</li>
+                <li class="nav-item"><a href="./login.html"><button>Log in</button></a></li>            </ul>
         </div>
     </nav>
-
     <main>
         <h1 class="signup-heading">Sign Up</h1>
-        <form class="login-form" action="">
-            <p class="alert"></p>
-            <label for="username">Username</label>
-            <input id="username" class="username" type="text" placeholder="Enter Username"/>
+        <form class="signup-form" action="">
+            <div class="name-username">
+                <div>
+                    <label for="name">Name</label>
+                    <input id="name" class="name" type="text" placeholder="Enter Full Name">
+                </div>
+                <div>
+                    <label for="username">Username</label>
+                    <input id="username" class="username" type="" placeholder="Enter Username">
+                </div>
+                
+            </div>
+            <br>
+            <br>
+            <label for="email">Email</label>
+            <input id="email" class="email" type="email" placeholder="Enter your Email">
             <br>
             <br>
             <label for="password">Password</label>
-            <input id="password" class="password" type="password" placeholder="Enter Password">
+            <input id="password" class="password" type="password" placeholder="Enter Password"/>
             <br>
-            <a href="#" class="forgotpass">Forgot password?</a>
             <br>
-            <input type="submit" value="Login" class="submit">
+            <input type="submit" value="Create Account" class="create">
             <div class="signup-link">
-                <p>Don't have an account?</p>
-                <a href="/signup.html" class="signup">signup</a>
+                <p>Already have an account?</p>
+                <a href="./login.html" class="login">Log in</a>
             </div>
         </form>
+        
     </main>
+    <footer>
+        <p>Made By Harshit Kumar</p>
+        <p>copyright &copy; <a href="./login.html">LoginAuth</a></p>
+    </footer>
 </body>
 <script src="./main.js"></script>
 </html>

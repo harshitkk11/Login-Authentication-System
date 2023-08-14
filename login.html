@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Log in</title>
-    <link rel="stylesheet" href=".\style.css">   
+    <link rel="stylesheet" href=".\style.css" />
 </head>
+
 <body>
     <nav class="navbar">
         <div class="pagename">
@@ -13,36 +15,45 @@
         </div>
         <div class="items-div">
             <ul class="nav-items">
-                <li class="nav-item"><a href="./about.html">About</a></li>
+                <li class="nav-item">
+                    <a href="./about.html" class="about-btn">About</a>
+                </li>
                 <li class="nav-item">|</li>
-                <li class="nav-item"><button><a href="./signup.html">Sign Up</a></button></li>
+                <li class="nav-item">
+                    <a href="./signup.html"><button>Sign Up</button></a>
+                </li>
             </ul>
         </div>
     </nav>
     <main>
         <h1 class="login-heading">Log in</h1>
         <form class="login-form" action="" onsubmit="return validation()">
-            <p class="alert"></p>
+            <p class="login-error"></p>
+            <br />
             <label for="username">Username</label>
-            <input id="username" class="username" type="text" placeholder="Enter Username"/>
-            <br>
-            <br>
+            <input id="username" class="username" type="text" placeholder="Enter Username" />
+            <p class="username-error"></p>
+            <br />
+            <br />
             <label for="password">Password</label>
-            <input id="password" class="password" type="password" placeholder="Enter Password"/>
-            <br>
+            <input id="password" class="password" type="password" placeholder="Enter Password" />
+            <p class="password-error"></p>
+            <br />
+            <br />
             <a href="./forgot.html" class="forgotpass">Forgot password?</a>
-            <br>
-            <input type="submit" value="Login" class="submit">
+            <br />
+            <input type="submit" value="Login" class="submit" />
             <div class="signup-link">
                 <p>Don't have an account?</p>
                 <a href="./signup.html" class="signup">signup</a>
             </div>
         </form>
-        
     </main>
-    <!-- <footer>
+    <footer>
         <p>Made By Harshit Kumar</p>
-    </footer> -->
+        <p>Copyright &copy; <a href="./login.html">LoginAuth</a></p>
+    </footer>
 </body>
 <script src="./main.js"></script>
+
 </html>

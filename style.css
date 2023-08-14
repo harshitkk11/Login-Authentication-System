@@ -8,6 +8,9 @@ body{
     background: #262626;
     color: white;
     font-family: "Roboto", sans-serif;
+    display: flex; 
+    flex-direction: column; 
+    min-height: 100vh;
 }
 
 /* Navigation Bar */
@@ -16,7 +19,8 @@ body{
     width: 100%;
     background-color: #0d0d0d;
     height: 60px;
-    justify-content: space-between;
+    justify-content: center;
+    position: sticky;
 }
 
 /* NavBar is divided into to parts div1(pagename) & div2(items) */
@@ -38,8 +42,9 @@ body{
     font-weight: bold;
 }
 
+/* Logo Text Letters */
 span{
-    color: #660066;
+    color: #64609A;
 }
 
 /* Div2(items) */
@@ -50,12 +55,13 @@ span{
     align-items: center;
 }
 
-
+/* item list in navebar */
 .items-div.nav-items{
     list-style: none;
     text-align: center;
 }
 
+/* items in the navbar */
 .nav-item{
     display:inline;
     font-size: 15px;
@@ -63,60 +69,112 @@ span{
     
 }
 
-.nav-item>a{
+/* About text ancher in Navbar */
+.nav-item>.about-btn{
     text-decoration: none;
     color: white;
 }
 
-.nav-item>button{
+/* buttons in navbar */
+.nav-item>a>button{
     border: 0;
-    border-radius: 13px;
-    box-shadow: 0 0 8px white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #336699;
+    background: #64609A;
     padding: 10px;
-
 }
 
-.nav-item>button:active{
+.nav-item>a>button:active{
     background:#cccccc
 }
 
-.nav-item>button>a{
+.nav-item>a{
     text-decoration: none;
     color: black;
     font-size: 15px;
     font-size: 15px;
 }
 
+/* main container */
 main{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    margin-bottom: 100px;
+    flex-grow: 1
 }
 
-.login-heading{
+/* h1 tag in login, about and signup page */
+.login-heading, .about-heading, .signup-heading{
     margin: 30px 0;
     font-weight: bold;
 }
 
-.login-form{
-    border-radius: 5px;
+/* form container */
+.login-form, .signup-form, .forgotpass-form{
+    border-radius: 10px;
     box-shadow: 2px 2px 20px 2px white;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items:center;
     width: auto;
-    padding: 40px;
-    
+    padding: 60px;
 }
 
-.alert{
-    margin-top: 0;
+/* div for name and username in signup form */
+.name-username{
+    display: flex;
+    justify-content: space-between;
+    flex-direction:row;
+}
+
+.name-username>div{
+    display: flex;
+    width: 49%;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.name-username>div>input{
+    width: 99%;
+}
+
+/* div for paragraph in about page */
+.about{
+    border-radius: 10px;
+    box-shadow: 2px 2px 20px 2px white;
+    font-size: 18px;
+    line-height: 30px;
+    width: 70%;
+    height: 400px;
+    padding: 40px;
+}
+
+/* Error appears at top in login form when user not found */
+.login-error{
+    /* margin-top: 20px; */
     margin-bottom: 20px;
     color: #cc0000;
+    text-shadow: 0 0 10px;
+    align-self: center;
+    box-shadow: 0 0 10px;
+    border-radius: 5px;
+    padding: 20px;
 }
 
+/* Error appears next to username and password when they are empty */
+.username-error, .password-error{
+    margin-top: 20px;
+    /* margin-bottom: 20px; */
+    color: #cc0000;
+    text-shadow: 0 0 10px;
+    align-self: self-start;
+}
+
+/* Labels of the form */
 label{
     font-size: 17px;
     margin-bottom: 10px;
@@ -124,8 +182,9 @@ label{
     font-weight: bold;
 }
 
-#username, #password{
-    width: 250px;
+/* Input fields in form */
+.name, .username, .email, .password{
+    width: 100%;
     height: 35px;
     border-radius: 5px;
     padding: 10px;
@@ -134,31 +193,41 @@ label{
     background: #e6e6e6;
 }
 
-#username:focus, #password:focus{
+.name:focus, .username:focus, .email:focus, .password:focus{
     background: white;
     box-shadow: 0 0 10px white;
 }
 
+/* Forgot password link in login form */
 .forgotpass{
     color: #bfbfbf;
     align-self:self-start;
     font-size: 15px;
+    margin-bottom: 10px;
 }
 
-.submit{
+/* form submit buttons in login, signup and forgot form */
+.submit, .create, .reset{
     width: 250px;
     font-size: 17px;
     padding: 8px;
     align-items: end;
     border: 0;
-    border-radius: 13px;
-    box-shadow: 0 0 10px white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #336699;
+    background: #64609A;
 }
 
-.submit:active{
+.create{
+    width: 100%;
+    margin: 10px 0;
+}
+
+.submit:active, .create:active{
     background:#cccccc;
 }
 
+/* signup link div in the login form */
 .signup-link{
     margin-top: 30px;
     display: flex;
@@ -166,19 +235,37 @@ label{
     align-items: baseline;
 }
 
-.signup{
+/* signup and login link at the end of the login form */
+.signup, .login{
     margin-left: 5px;
     color: #bfbfbf;
     font-size: 15px;
 }
 
+/* Don't have an account? text */
 .ask-signup{
     font-size: 15px;
     margin-top: 20px;
 }
 
 
-/* footer{
-    background-color: black;
-    color: white;
-} */
+footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #0d0d0d;
+    height: auto;
+    width: 100%;
+    padding: 10px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+footer>p>a{
+    line-height: 20px;
+    color: #bfbfbf;
+}
