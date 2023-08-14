@@ -38,6 +38,10 @@ body{
     font-weight: bold;
 }
 
+span{
+    color: #660066;
+}
+
 /* Div2(items) */
 .items-div{
     width: 50%;
