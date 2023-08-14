@@ -8,7 +8,7 @@ login_error.style.display = "none";
 username_error.style.display = "none";
 password_error.style.display = "none";
 
-function validation(){
+function loginValidation(){
     if (username.value == "" ){
         username_error.style.display = "";
         login_error.style.display = "none";

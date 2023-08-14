@@ -20,7 +20,7 @@ body{
     background-color: #0d0d0d;
     height: 60px;
     justify-content: center;
-    position: sticky;
+    position: fixed;
 }
 
 /* NavBar is divided into to parts div1(pagename) & div2(items) */
@@ -53,6 +53,7 @@ span{
     display: flex;
     justify-content:flex-end;
     align-items: center;
+    padding-right: 10px;
 }
 
 /* item list in navebar */
@@ -101,7 +102,7 @@ main{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin-bottom: 100px;
+    margin: 100px 0;
     flex-grow: 1
 }
 
@@ -250,7 +251,7 @@ label{
 
 
 footer{
-    position: fixed;
+    position: relative;
     bottom: 0;
     left: 0;
     right: 0;
