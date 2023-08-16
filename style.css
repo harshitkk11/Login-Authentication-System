@@ -83,6 +83,7 @@ body{
     box-shadow: 0 0 10px #336699;
     background: #64609A;
     padding: 10px;
+    color: white;
 }
 
 .nav-item>a>button:active{
@@ -217,6 +218,7 @@ label{
     border-radius: 10px;
     box-shadow: 0 0 10px #336699;
     background: #64609A;
+    color: white;
 }
 
 .create{
