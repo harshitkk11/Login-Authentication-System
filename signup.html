@@ -20,16 +20,18 @@
     </nav>
     <main>
         <h1 class="signup-heading">Sign Up</h1>
-        <form class="signup-form" action="" onsubmit="return signupValidation()">
+        <form class="signup-form" action="" onsubmit="return formValidation()">
+            <span class="error signup-error"></span>
             <div class="name-username">
                 <div>
                     <label for="name">Name</label>
                     <input id="name" class="name" type="text" placeholder="Enter Full Name">
-                    <p class="name-error"></p>
+                    <span class="error name-error"></span>
                 </div>
                 <div>
                     <label for="username">Username</label>
                     <input id="username" class="username" type="" placeholder="Enter Username">
+                    <span class="error username-error"></span>
                 </div>
                 
             </div>
@@ -37,10 +39,12 @@
             <br>
             <label for="email">Email</label>
             <input id="email" class="email" type="email" placeholder="Enter your Email">
+            <span class="error email-error"></span>
             <br>
             <br>
             <label for="password">Password</label>
             <input id="password" class="password" type="password" placeholder="Enter Password"/>
+            <span class="error password-error"></span>
             <br>
             <br>
             <input type="submit" value="Create Account" class="create">
@@ -56,5 +60,64 @@
         <p>copyright &copy; <a href="./login.html">LoginAuth</a></p>
     </footer>
 </body>
-<script src="./main.js"></script>
+<script>
+    const name = document.querySelector('.name');
+    const username = document.querySelector('.username');
+    const email = document.querySelector('.email');
+    const password = document.querySelector('.password');
+    const form_error = document.querySelectorAll('.error');
+    
+    for(let element of form_error){
+        element.style.display = "none";
+    }
+
+    // Display error on the web page
+    function displayError(selector, error){
+        for(let element of form_error){
+        element.style.display = "none";
+        }
+        const element = document.querySelector(selector);
+        element.style.display = "";
+        element.innerHTML = error;
+    }
+
+    // Validate form inputs
+    function formValidation(){
+        var submit = true;
+        // const specialChars = /[@!#$%^&*()+=_-|{[}"';:?/<>,.`~]/;
+        
+        if (name.value.length < 4){
+            displayError(".name-error", "Invalid Name !!");
+            submit =  false;
+        }
+
+        else if (username.value == ""){
+            displayError(".username-error", "Invalid Username !!");
+            submit =  false;
+        }
+
+        else if (email.value.length < 12){
+            displayError(".email-error", "Invalid email address !!");
+            submit =  false;
+        }
+
+        else if (password.value.length < 8){
+            displayError(".password-error", 
+            "Strong password requires At least :<br>\
+            * 8 characters<br>\
+            * One lowercase character<br>\
+            * One special character<br>\
+            * One uppercase character<br>\
+            * One number");
+            submit =  false;
+        }
+
+        else if(name.value != "" && username.value != "" && email.value != "" && password.value != ""){
+            displayError(".signup-error", "User not found !!");
+            submit =  false;
+        }
+
+        return submit;
+    }
+</script>
 </html>

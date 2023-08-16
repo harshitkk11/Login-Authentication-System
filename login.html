@@ -27,25 +27,25 @@
     </nav>
     <main>
         <h1 class="login-heading">Log in</h1>
-        <form class="login-form" action="" onsubmit="return loginValidation()">
-            <p class="login-error"></p>
+        <form class="login-form" action="" onsubmit="return formValidation()">
+            <span class="error login-error"></span>
             <br />
             <label for="username">Username</label>
             <input id="username" class="username" type="text" placeholder="Enter Username" />
-            <p class="username-error"></p>
+            <span class="error username-error"></span>
             <br />
             <br />
             <label for="password">Password</label>
             <input id="password" class="password" type="password" placeholder="Enter Password" />
-            <p class="password-error"></p>
+            <span class="error password-error"></span>
             <br />
             <br />
-            <a href="./forgot.html" class="forgotpass">Forgot password?</a>
+            <a href="./forgot.html" class="forgotpass">Forgot Password?</a>
             <br />
             <input type="submit" value="Login" class="submit" />
             <div class="signup-link">
                 <p>Don't have an account?</p>
-                <a href="./signup.html" class="signup">signup</a>
+                <a href="./signup.html" class="signup">Signup</a>
             </div>
         </form>
     </main>
@@ -54,6 +54,58 @@
         <p>Copyright &copy; <a href="./login.html">LoginAuth</a></p>
     </footer>
 </body>
-<script src="./main.js"></script>
+
+<!-- JavaScript -->
+<script>
+    // Login form variables
+    const username = document.querySelector('.username');
+    const password = document.querySelector('.password');
+    const form_error = document.querySelectorAll('.error');
+    for(let element of form_error){
+        element.style.display = "none";
+    }
+
+    // Display error on the web page
+    function displayError(selector, error){
+        for(let element of form_error){
+        element.style.display = "none";
+        }
+        const element = document.querySelector(selector);
+        element.style.display = "";
+        element.innerHTML = error;
+    }
+
+    // Validate form inputs
+    function formValidation(){
+        var submit = true;
+        
+        if (username.value == ""){
+            displayError(".username-error", "Enter Username !!");
+            submit =  false;
+        }
+
+        else if (username.value.length < 5){
+            displayError(".username-error", "Invalid Username !!");
+            submit =  false;
+        }
+
+        else if (password.value == ""){
+            displayError(".password-error", "Enter Password !!");
+            submit =  false;
+        }
+
+        else if (password.value.length < 8){
+            displayError(".password-error", "Invalid Password !!");
+            submit =  false;
+        }
+
+        else if(username.value != "" && password.value != "" && username.value.length >= 5 && password.value.length >= 8){
+            displayError(".login-error", "User not found !!");
+            submit =  false;
+        }
+
+        return submit;
+    }
+</script>
 
 </html>
