@@ -274,7 +274,7 @@ footer>p>a{
     color: #bfbfbf;
 }
 
-@media only screen and (max-width: 350px){
+@media only screen and (max-width: 400px){
     
     .login-form, .signup-form, .forgotpass-form{
         padding: 10px;
