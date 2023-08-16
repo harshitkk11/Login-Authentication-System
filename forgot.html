@@ -33,7 +33,8 @@
     <main>
         <h1 class="login-heading">Reset Your Password</h1>
 
-        <form class="forgotpass-form" action="">
+        <form class="forgotpass-form" action="" onsubmit="return forgotEmail()">
+            <span class="error email-error"></span>
             <label for="email">Email</label>
             <input id="email" class="email" type="email" placeholder="Enter Your Email Address" />
             <br>
@@ -50,6 +51,6 @@
         <p>copyright &copy; <a href="./login.html">LoginAuth</a></p>
     </footer>
 </body>
-<script src="./main.js"></script>
+<script src="./scripts.js"></script>
 
 </html>

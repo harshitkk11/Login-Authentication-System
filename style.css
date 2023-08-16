@@ -164,7 +164,7 @@ main{
 }
 
 /* Error appears at top in login form when user not found */
-.login-error, .signup-error{
+.login-error, .signup-error, .email-error{
     /* margin-top: 20px; */
     margin-bottom: 20px;
     color: #cc0000;

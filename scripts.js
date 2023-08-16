@@ -1,4 +1,4 @@
-// Login form variables
+// Form error display element
 const form_error = document.querySelectorAll('.error');
 for(let element of form_error){
     element.style.display = "none";
@@ -14,7 +14,7 @@ function displayError(selector, error){
     element.innerHTML = error;
 }
 
-// Validate form inputs
+// Validate login form inputs
 function loginValidation(){
     const username = document.querySelector('.username');
     const password = document.querySelector('.password');
@@ -48,27 +48,27 @@ function loginValidation(){
     return submit;
 }
 
-// Validate form inputs
+// Validate signup form inputs
 function signupValidation(){
     const name = document.querySelector('.name');
     const username = document.querySelector('.username');
     const email = document.querySelector('.email');
     const password = document.querySelector('.password');
     var submit = true;
-    // const specialChars = /[@!#$%^&*()+=_-|{[}"';:?/<>,.`~]/;
+    const specialChars = /[@!#$%^&*()+=_,.`~-\d]/;
     
-    if (name.value.length < 4){
+    if (name.value.length < 4 || specialChars.test(name.value)){
         displayError(".name-error", "Invalid Name !!");
         submit =  false;
     }
 
-    else if (username.value == ""){
+    else if (username.value == "" || /[ @!#$%^&*()+=_,.`~-]/.test(username.value)){
         displayError(".username-error", "Invalid Username !!");
         submit =  false;
     }
 
-    else if (email.value.length < 12){
-        displayError(".email-error", "Invalid email address !!");
+    else if (email.value == ""){
+        displayError(".email-error", "Enter your email address !!");
         submit =  false;
     }
 
@@ -88,5 +88,17 @@ function signupValidation(){
         submit =  false;
     }
 
+    return submit;
+}
+
+function forgotEmail(){
+    const email = document.querySelector('.email');
+    var submit = true;
+
+    if (email.value == ""){
+        displayError(".email-error", "Enter your email address !!");
+        submit =  false;
+    }
+    
     return submit;
 }
