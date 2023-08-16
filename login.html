@@ -27,7 +27,7 @@
     </nav>
     <main>
         <h1 class="login-heading">Log in</h1>
-        <form class="login-form" action="" onsubmit="return formValidation()">
+        <form class="login-form" action="" onsubmit="return loginValidation()">
             <span class="error login-error"></span>
             <br />
             <label for="username">Username</label>
@@ -55,57 +55,5 @@
     </footer>
 </body>
 
-<!-- JavaScript -->
-<script>
-    // Login form variables
-    const username = document.querySelector('.username');
-    const password = document.querySelector('.password');
-    const form_error = document.querySelectorAll('.error');
-    for(let element of form_error){
-        element.style.display = "none";
-    }
-
-    // Display error on the web page
-    function displayError(selector, error){
-        for(let element of form_error){
-        element.style.display = "none";
-        }
-        const element = document.querySelector(selector);
-        element.style.display = "";
-        element.innerHTML = error;
-    }
-
-    // Validate form inputs
-    function formValidation(){
-        var submit = true;
-        
-        if (username.value == ""){
-            displayError(".username-error", "Enter Username !!");
-            submit =  false;
-        }
-
-        else if (username.value.length < 5){
-            displayError(".username-error", "Invalid Username !!");
-            submit =  false;
-        }
-
-        else if (password.value == ""){
-            displayError(".password-error", "Enter Password !!");
-            submit =  false;
-        }
-
-        else if (password.value.length < 8){
-            displayError(".password-error", "Invalid Password !!");
-            submit =  false;
-        }
-
-        else if(username.value != "" && password.value != "" && username.value.length >= 5 && password.value.length >= 8){
-            displayError(".login-error", "User not found !!");
-            submit =  false;
-        }
-
-        return submit;
-    }
-</script>
-
+<script src="scripts.js"></script>
 </html>
